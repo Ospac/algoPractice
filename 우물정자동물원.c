@@ -66,5 +66,8 @@ int main(void) {
     }
     
     fence(0, n - 1, 0, n - 1);
-    printf("%d", count);
+    fclose(fp);
+    fp = fopen("output.txt", "w+");
+    fprintf(fp,"%d",count);
 }
+
